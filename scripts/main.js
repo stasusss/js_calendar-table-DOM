@@ -29,12 +29,12 @@ function tHead() {
 function tBody(daysCount, weekStart) {
   const body = document.createElement('tbody');
 
-  const weeksQuantity = Math.ceil(daysCount / 7);
+  const weeksCount = Math.ceil(daysCount / 7);
 
   let mainCounter = 1;
-  let additionalCounter = 0;
+  let addCounter = 0;
 
-  for (let i = 0; i < weeksQuantity; i++) {
+  for (let i = 0; i < weeksCount; i++) {
     const row = document.createElement('tr');
 
     body.append(row);
@@ -43,10 +43,10 @@ function tBody(daysCount, weekStart) {
       const cell = document.createElement('td');
 
       if (mainCounter < weekStart) {
-        additionalCounter++;
+        addCounter++;
       } else if (mainCounter >= weekStart
-        && mainCounter <= daysCount + additionalCounter) {
-        cell.textContent = mainCounter - additionalCounter;
+        && mainCounter <= daysCount + addCounter) {
+        cell.textContent = mainCounter - addCounter;
       }
       mainCounter++;
       row.append(cell);
