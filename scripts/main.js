@@ -56,4 +56,4 @@ function tBody(daysCount, weekStart) {
   return body;
 };
 
-calendarTable(2019, 10, calendar);
+calendarTable(2020, 6, calendar);
